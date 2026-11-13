@@ -1,0 +1,24 @@
+RUN ALL VALIDATION — Weekly mortality notebooks (2026-11-13)
+
+Method: nbclient/real Python kernel; each notebook executed top-to-bottom from a FRESH isolated kernel in the SAME directory as the bundled CSV/GeoJSON inputs. Errors are not suppressed; notebook code outputs are saved. Python version: 3.13.5.
+
+1. Business Understanding and Analysis.ipynb: 2 executed code cells, 0 exceptions, 16 total cells, output=70 KiB
+2. Data Collection, Understanding, and Preparation.ipynb: 27 executed code cells, 0 exceptions, 48 total cells, output=438 KiB
+3. Data Analysis with SQL.ipynb: 18 executed code cells, 0 exceptions, 36 total cells, output=76 KiB
+4. Data Analysis with Python.ipynb: 19 executed code cells, 0 exceptions, 37 total cells, output=1317 KiB
+5.Data_Visualization.ipynb: 17 executed code cells, 0 exceptions, 40 total cells, output=2392 KiB
+6.Regression_Analysis.ipynb: 17 executed code cells, 0 exceptions, 40 total cells, output=1043 KiB
+
+Data/report consistency checks:
+- 442 observed weeks, 4,769,329 observed registrations.
+- 27 calendar gaps interpolated; 469-row prepared grid with exactly 13 fields.
+- Notebook 2 regenerated CLEANED.csv byte-for-byte identical to supplied source CLEANED.csv.
+- 468 lagged modeling rows: 374 chronological training rows and 94 test outcomes, ALL observed.
+- Pearson correlation on observed mortality vs mean weekly Tmax: approximately -0.474.
+- Polynomial degree-2 without temperature on 94 test weeks: MAE around 643.94 deaths per week (matching the report).
+- Preserved paper-facing figures; added original-vs-paper warnings for any prior holdout-used tuning.
+
+Important scientific limitations:
+- Observed target-week Tmax is not a prospective weather forecast, and registrations are not deaths by occurrence date.
+- An observational association is not causality. The report's fixed-alpha benchmark used the same holdout during model choices, so clean post-selection superiority is NOT claimed.
+- This verification establishes the notebooks execute with the stated environment and bundled inputs; it does not guarantee unchanged results under arbitrary future library versions/other operating systems.

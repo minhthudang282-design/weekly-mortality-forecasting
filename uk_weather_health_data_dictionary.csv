@@ -1,0 +1,13 @@
+﻿dataset,column,meaning,unit
+monthly,month_start,First day of month (YYYY-MM-DD) used as month index.,
+monthly,geography_level,Spatial level (provider or national).,
+monthly,geography_name,Provider name or national aggregate label.,
+monthly,ae_attendances_total,Total A&E attendances (sum across available attendance categories in monthly file).,count
+monthly,ae_over4hrs_total,Total attendances over 4 hours (sum across available categories if present).,count
+monthly,tasmax_mean_monthly_degC,Monthly mean of daily UK-average maximum temperature (tasmax).,degC
+monthly,tasmax_max_monthly_degC,Monthly maximum of daily UK-average maximum temperature (tasmax).,degC
+weekly,week_start,Monday of the week used as weekly index (YYYY-MM-DD).,
+weekly,metric,Outcome metric name (currently weekly_deaths_all_cause).,
+weekly,value,Weekly total deaths (all-cause) aggregated to national England & Wales where identifiable.,count
+weekly,tasmax_mean_weekly_degC,Weekly mean of daily UK-average maximum temperature (tasmax).,degC
+weekly,tasmax_max_weekly_degC,Weekly max of daily UK-average maximum temperature (tasmax).,degC

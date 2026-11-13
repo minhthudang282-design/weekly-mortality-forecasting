@@ -1,0 +1,30 @@
+# Python / Jupyter artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.env.*
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Notebook/export outputs; keep source notebooks and supplied data
+.nbconvert.ipynb
+*.html
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Secrets and private student evidence (not intended for public GitHub)
+*AI*Audit*Log*.xlsx
+*AI*Audit*Log*.csv
+*.pem
+*.key
+secrets.*
+
+# Editor artifacts
+.vscode/
+.idea/
